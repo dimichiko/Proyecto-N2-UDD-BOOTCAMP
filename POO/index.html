@@ -1,0 +1,60 @@
+<!-- poo/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Quiz - POO</title>
+    <style>
+        .quiz-container { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            padding: 20px; 
+            font-family: Arial, sans-serif;
+        }
+        .question { 
+            margin-bottom: 20px; 
+            padding: 15px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px;
+        }
+        .option {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .option:hover {
+            background-color: #f0f0f0;
+        }
+        .results {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .feedback {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Sistema de Quiz</h1>
+        <div id="questionList"></div>
+        <div id="results" class="results"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
