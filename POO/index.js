@@ -1,6 +1,5 @@
-// poo/index.js
 class Quiz {
-    // Variables Privadas
+    
     #countTrue = 0;
     #countFalse = 0;
 
@@ -87,10 +86,10 @@ class Quiz {
     }
 }
 
-// Inicializar el quiz
+
 const quiz = new Quiz();
 
-// Agregar preguntas
+
 quiz.crearPregunta(
     "¿Cuál es el planeta más grande del sistema solar?",
     ["Júpiter", "Saturno", "Neptuno", "Urano"],
