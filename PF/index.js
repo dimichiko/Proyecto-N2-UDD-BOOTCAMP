@@ -1,4 +1,3 @@
-// Estado inicial
 const initialState = {
     preguntas: [],
     respuestasUsuario: [],
@@ -6,7 +5,6 @@ const initialState = {
     countFalse: 0
 };
 
-// Funciones puras para manipular el estado
 const crearPregunta = (state, pregunta, respuestas, respuestaCorrecta) => {
     try {
         if (!pregunta || !respuestas || !respuestaCorrecta) {
@@ -47,7 +45,6 @@ const responderPregunta = (state, numeroPregunta, respuestaUsuario) => {
     }
 };
 
-// Funciones de renderizado
 const renderizarPreguntas = (state) => {
     const container = document.getElementById('questionList');
     container.innerHTML = state.preguntas.map((pregunta, index) => `
@@ -88,7 +85,6 @@ const actualizarResultados = (state) => {
     `;
 };
 
-// Manejadores de eventos
 let state = initialState;
 
 const handleResponder = (numeroPregunta, respuestaUsuario) => {
@@ -97,7 +93,6 @@ const handleResponder = (numeroPregunta, respuestaUsuario) => {
     actualizarResultados(state);
 };
 
-// Inicialización con preguntas de ejemplo
 const preguntas = [
     {
         pregunta: "¿Cuál es el planeta más grande del sistema solar?",
@@ -141,10 +136,8 @@ const preguntas = [
     }
 ];
 
-// Inicializar el estado con las preguntas
 preguntas.forEach(({ pregunta, respuestas, respuestaCorrecta }) => {
     state = crearPregunta(state, pregunta, respuestas, respuestaCorrecta);
 });
 
-// Renderizar la interfaz inicial
 renderizarPreguntas(state);
